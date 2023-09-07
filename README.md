@@ -1,4 +1,4 @@
-# 👋 WELCOME TO FLYDENTIFIER
+# 👋 WELCOME TO FLYDENTIFIER 👋
 
 Flydentifier is a web forum for all things Fly tying, fishing, entomology, fish biology, watersource conservation efforts and more!
 
