@@ -27,6 +27,7 @@ DEFAULT_APPS = [
 CUSTOM_APPS = [
     "apps.user",
     "apps.post",
+    "apps.core",
 ]
 
 THIRD_PARTY_APPS = []
@@ -48,7 +49,7 @@ ROOT_URLCONF = "config.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [str(BASE_DIR / "templates")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -96,6 +97,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"
+
+STATICFILES_DIRS = [str(BASE_DIR / "static")]
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

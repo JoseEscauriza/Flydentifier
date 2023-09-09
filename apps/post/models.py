@@ -1,5 +1,6 @@
 from django.db import models
 from apps.core.models import TimestampBase
+from config.settings.base import BASE_DIR
 
 
 class Post(TimestampBase):
@@ -10,6 +11,8 @@ class Post(TimestampBase):
     title = models.CharField(max_length=50, null=False, blank=False)
     body = models.TextField(max_length=300, null=True, blank=True)
     tags = models.ManyToManyField("post.Tag", verbose_name=("Tags"))
+    upload = models.ImageField(verbose_name="Image upload", upload_to="post_img_dir",
+                               height_field=None, width_field=None, max_length=None, null=True, blank=True)
 
     def __str__(self):
         return f"{self.user_id.username} - {self.title}"
@@ -57,7 +60,7 @@ class Fly(TimestampBase):
         "post.FlyType", verbose_name=("Fly Type"), on_delete=models.CASCADE)
     mat_amount = models.IntegerField(
         verbose_name="Amount of materials", null=True, blank=True)
-    upload = models.ImageField(verbose_name="Image upload", upload_to=None,
+    upload = models.ImageField(verbose_name="Image upload", upload_to="fly_img_dir",
                                height_field=None, width_field=None, max_length=None, null=True, blank=True)
 
     class Meta:
