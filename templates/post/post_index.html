@@ -1,8 +1,30 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}{{block.super}} - Post index{% endblock title %}
 
+{% block stylesheet %} {{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static 'css/post_index.css' %}" />
+{% endblock stylesheet %}
+
 {% block content %}
-<h1>test</h1>
+<h1>Post index</h1>
+
+<div class='post-list'>
+    <ul>
+        {% for post in index %}
+        <div class='post-line'>
+            <li>{{post.username}}: {{post.title}} Posted at: {{post.created_at}}
+            </div>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class='submit-post-text'>
+    <h4> Post something? <h4>
+</div>
+<a href='127.0.0.1:8000:post/form'>
+<button class='create-post-button'>Create a new post</button>
+
 
 {% endblock content %}
