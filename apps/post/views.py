@@ -5,8 +5,8 @@ from apps.post.models import Post
 
 
 def post_index(request):
-    index = Post.objects.all()
 
+    index = Post.objects.all()
     context = {
         'index': index
     }

@@ -1,4 +1,10 @@
 .env
 .venv
 .vscode
-None
+__pycache__/
+*.pyc
+*.pot
+db.sqlite3
+db.sqlite3.journal
+media
+*.log

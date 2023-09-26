@@ -28,3 +28,7 @@ dev-install:
 
 prod-install:
 	pip install -r requirements/prod.txt
+
+make dev-test:
+	python manage.py test --settings=config.settings.dev
+
