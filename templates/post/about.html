@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ block.super}} - About {% endblock title %}
+
+{% block stylesheet %}{{block.super}}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
+{% endblock stylesheet %}
+
+{% block content %}
+
+<div class="about-title">
+    <h1>About Flydentifier</h1>
+</div>
+
+
+<div class="about-body">
+    <div class="about">
+        <h2>About Flydentifier</h2>
+        <p>Welcome to Flydentifier, your ultimate online hub for fly fishing enthusiasts and entomology aficionados.
+            Dive into the world of fly fishing with our vibrant community forum and harness the power of our cutting-edge image recognition system.
+            Simply snap a picture of a bug, and instantly access a treasure trove of information about it. Flydentifier - where passion meets precision.
+        </p>
+    </div>
+
+<div class="mission">
+        <h2> Our Mission </h2>
+        <p>Flydentifier was born out of passion for fishing and entomology. We strive to bring you the latest technology
+        to make your day on the water more enjoyable.
+        </p>
+    </div>
+</div>
+{% endblock content %}

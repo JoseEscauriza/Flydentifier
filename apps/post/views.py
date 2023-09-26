@@ -1,26 +1,42 @@
 from django.shortcuts import render
-from apps.post.models import Post
+from apps.post.models import Post, Tag
+from django.views.generic import TemplateView
 
 # Create your views here.
 
 
-def post_index(request):
+class PostIndex(TemplateView):
+    def get(self, request):
 
-    index = Post.objects.all()
-    context = {
-        'index': index
-    }
+        index = Post.objects.all()
+        # tags = Post.objects.values('tags').annotate(name=Tag.name)
 
-    return render(
-        request,
-        template_name="post/post_index.html",
-        context=context
-    )
+        context = {
+            'index': index,
+            # 'tags': tags,
+        }
+
+        return render(
+            request,
+            template_name="post/post_index.html",
+            context=context
+        )
 
 
-def homepage(request):
+class Homepage(TemplateView):
+    def get(self, request):
 
-    return render(
-        request,
-        template_name="post/homepage.html"
-    )
+        return render(
+            request,
+            template_name="post/homepage.html",
+
+        )
+
+
+class About(TemplateView):
+    def get(self, request):
+
+        return render(
+            request,
+            template_name="post/about.html",
+        )

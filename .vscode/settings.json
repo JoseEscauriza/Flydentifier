@@ -1,0 +1,8 @@
+{
+    "python.analysis.include": [
+        "/home/jose/Desktop/Flydentifier"
+    ],
+    "pylint.path": [
+        "/home/jose/Desktop/Flydentifier"
+    ]
+}
