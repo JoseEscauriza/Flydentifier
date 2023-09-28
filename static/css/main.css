@@ -1,3 +1,10 @@
+.debug-warning {
+  padding: 20px;
+  background-color: red;
+  text-align: center;
+  color: black;
+}
+
 .navbar {
   background-color: #001223;
   overflow: hidden;
