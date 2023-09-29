@@ -8,7 +8,7 @@
 {% endblock stylesheet %}
 
 {% block content %}
-<h1>Post index</h1>
+<h1>A stream of information</h1>
 
 <div class='post-list'>
     <ul>
@@ -21,10 +21,10 @@
 </div>
 
 <div class='submit-post-text'>
-    <h4> Post something? <h4>
+    <h4> Share your story <h4>
 </div>
-<a href="{% url 'new-post'%}">
-<button class='create-post-button'>Create a new post</button>
-
-
+<div class='button-url-new'>
+    <a href="{% url 'new-post'%}">
+    <button class='create-post-button'>Create a new post</button>
+</div>
 {% endblock content %}

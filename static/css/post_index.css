@@ -1,15 +1,24 @@
 .submit-post-text {
-  text-align: center;
+  margin-left: 100px;
+  text-align: left;
   color: rgb(255, 255, 255);
   font-size: xx-large;
   font-weight: 200;
+  opacity: 60%;
+}
+
+.button-url-new {
+  width: 80%;
+  height: 50%;
+  margin-left: 100px;
+  margin-top: 0%;
 }
 
 .create-post-button {
   display: flexbox;
   align-items: center;
   width: 20%;
-  background-color: #4caf50;
+  background-color: #313e1b;
   color: white;
   font-size: x-large;
   font-weight: 800;
@@ -24,7 +33,9 @@
   padding-left: 3%;
   margin-left: 5%;
   margin-right: 5%;
-  background-color: #001223;
+  background-color: #1f1a24;
+  border: none;
+  border-radius: 10px;
 }
 
 .post-line {

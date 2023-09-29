@@ -6,7 +6,7 @@
 }
 
 .navbar {
-  background-color: #001223;
+  background-color: black;
   overflow: hidden;
 }
 
@@ -28,7 +28,7 @@
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #04aa6d;
+  background-color: #313e1b;
   color: white;
 }
 
@@ -55,7 +55,7 @@
 body {
   margin: auto;
   padding: auto;
-  background-color: #0f3553;
+  background-color: #121212;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
