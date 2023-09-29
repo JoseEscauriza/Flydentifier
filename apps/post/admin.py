@@ -37,6 +37,6 @@ class CustomFly(admin.ModelAdmin):
 admin.site.register(models.Post, CustomPost)
 admin.site.register(models.PostType)
 admin.site.register(models.Tag)
-admin.site.register(models.PostTag)
+# admin.site.register(models.PostTag)
 admin.site.register(models.Fly, CustomFly)
 admin.site.register(models.FlyType)
