@@ -32,6 +32,13 @@ PLEASE protect your waters, Flydentifier is commited to conservation efforts in 
 
 Flydentifier is heavily moderated. Racist / Aggresive / or otherwise incorect user conduct will not be tolerated. We want this to be a friendly space for anyone and everyone, please help us make new users feel welcome and at home.
 
+#### Whats coming?
+
+Currently planned roadmap includes development of:
+    - User dashboard functionality (CRUD operations where possible, etc)
+    - More interactive post view with integrated media.
+    - Middleware integration to check incoming traffic against image database (duplicate check)
+
 #### Want to help us?
 
 Developer? Moderator? Content creator?  
