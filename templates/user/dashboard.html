@@ -6,19 +6,19 @@
 {% block content %}
 <h1>Welcome to your User Dashboard</h1>
 
-<p> Username: {{info.username}}</p>
+<p> Username: {{user.username}}</p>
 
-<p> Email: {{info.email}}</p>
+<p> Email: {{user.email}}</p>
 
-<p> First name: {{info.first_name}}</p>
+<p> First name: {{user.first_name}}</p>
 
-<p> Last name: {{info.last_name}}</p>
+<p> Last name: {{user.last_name}}</p>
 
-<p> Bio: {{info.bio}}</p>
+<p> Bio: {{user.bio}}</p>
 
-<p> Staff member?: {{info.is_staff|staff_filter}}</p>
+<p> Staff member?: {{user.is_staff|staff_filter}}</p>
 
-<p> Date joined: {{info.date_joined}}</p>
+<p> Date joined: {{user.date_joined}}</p>
 
 <p> Password: <a href='127.0.0.1:8000/pass-change/'> <button class='pass-change-button'>Change password?</button> </p>
 

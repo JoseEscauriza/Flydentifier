@@ -1,1 +1,17 @@
-/* Add a black background color to the top navigation */
+.homepage-banner {
+  display: block;
+  margin-top: 5em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.banner-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.banner-footer p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: xx-large;
+}

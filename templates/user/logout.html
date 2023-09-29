@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}{{block.super}} - Login {% endblock title %}
+{% block title %}{{block.super}} - Logout {% endblock title %}
 {% block stylesheet %}{{block.super}}
 <link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}" />
 {% endblock stylesheet %}
 
 {% block content %}
-<div class="resource-form">
+<div class="logout-form">
 
-  <form method="post" action="{% url 'user-login'%}">
+  <form method="post" action="{% url 'user-logout'%}">
     {% csrf_token %} {{ form }}
     <input type="submit" value="Log in" />
   </form>

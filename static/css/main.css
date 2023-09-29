@@ -32,6 +32,26 @@
   color: white;
 }
 
+.authentication-buttons {
+  float: right;
+  padding-right: 20px;
+}
+
+.login-button,
+.logout-button {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.login-button:hover,
+.logout-button:hover {
+  background-color: #ddd;
+  color: black;
+}
+
 body {
   margin: auto;
   padding: auto;

@@ -11,7 +11,7 @@ class Post(TimestampBase):
     title = models.CharField(max_length=50, null=False, blank=False)
     body = models.TextField(max_length=300, null=True, blank=True)
     tags = models.ManyToManyField("post.Tag", verbose_name=("Tags"))
-    upload = models.ImageField(verbose_name="Image upload", upload_to="post_img_dir",
+    upload = models.ImageField(verbose_name="Image upload", upload_to="media/post_img_dir",
                                height_field=None, width_field=None, max_length=None, null=True, blank=True)
 
     def __str__(self):
@@ -60,7 +60,7 @@ class Fly(TimestampBase):
         "post.FlyType", verbose_name=("Fly Type"), on_delete=models.CASCADE)
     mat_amount = models.IntegerField(
         verbose_name="Amount of materials", null=True, blank=True)
-    upload = models.ImageField(verbose_name="Image upload", upload_to="fly_img_dir",
+    upload = models.ImageField(verbose_name="Image upload", upload_to="media/fly_img_dir",
                                height_field=None, width_field=None, max_length=None, null=True, blank=True)
 
     class Meta:

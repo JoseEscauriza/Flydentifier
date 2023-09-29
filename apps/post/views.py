@@ -1,11 +1,15 @@
 from django.shortcuts import render
 from apps.post.models import Post, Tag
 from django.views.generic import TemplateView
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
 
 
-class PostIndex(TemplateView):
+class PostIndex(LoginRequiredMixin, TemplateView):
+    login_url = 'user-login'
+    redirect_field_name = 'next'
+
     def get(self, request):
 
         index = Post.objects.all()
