@@ -14,7 +14,7 @@
     <ul>
         {% for post in index %}
         <div class='post-line'>
-            <li>{{post.username}}: {{post.title}} Posted at: {{post.created_at}}
+            <li><a href="{% url "post-view" post.id %}" >{{post.username}}: {{post.title}} Posted at: {{post.created_at}}</a>
             </div>
         {% endfor %}
     </ul>

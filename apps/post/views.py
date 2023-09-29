@@ -27,6 +27,24 @@ class PostIndex(LoginRequiredMixin, TemplateView):
         )
 
 
+class PostView(LoginRequiredMixin, TemplateView):
+    def get(self, request, id):
+
+        post = Post.objects.get(pk=id)
+        tags = post.tags.all()
+
+        context = {
+            'post': post,
+            'tags': tags,
+        }
+
+        return render(
+            request,
+            template_name="post/post_view.html",
+            context=context
+        )
+
+
 class Homepage(TemplateView):
     def get(self, request):
 

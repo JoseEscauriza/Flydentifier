@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{block.super}} - {{post.title}}{% endblock title %}
+
+{% block stylesheet %} {{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static 'css/post_view.css' %}" />
+{% endblock stylesheet %}
+
+{% block content %}
+<div class="post-title}">
+<p>[{{post.post_type_id|upper}}] - {{post.title}}
+</div>
+
+</div class="post-tags">
+{% for tag in tags %}
+{{tag}}
+{% endfor %}
+</div>
+
+</div class="post-body">
+<p>{{post.body}}</p>
+</div>
+
+{% endblock content %}

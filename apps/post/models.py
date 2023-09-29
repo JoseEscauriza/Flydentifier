@@ -28,20 +28,6 @@ class Tag(models.Model):
         return self.name
 
 
-# class PostTag(TimestampBase):
-#     modified_at = None
-#     post_id = models.ForeignKey("post.Post", verbose_name=(
-#         "Post id"), on_delete=models.CASCADE)
-#     tag_id = models.ForeignKey("post.Tag", verbose_name=(
-#         "Tag id"), on_delete=models.CASCADE)
-
-#     def __str__(self):
-#         return f"{self.post_id.title} - {self.tag_id.name}"
-
-#     class Meta:
-#         verbose_name_plural = "Post Tags"
-
-
 class PostType(models.Model):
     type = models.CharField(max_length=50)
     description = models.TextField(null=True, blank=True)
